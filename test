@@ -1,0 +1,13 @@
+const mineflayer = require('mineflayer');
+
+const bot = mineflayer.createBot({
+    host: "xyi228.aternos.me",
+    port: 25565,
+    username: "TestBot",
+    version: "1.20.4",
+    auth: "offline"
+});
+
+bot.on('spawn', () => console.log('✅ УСПЕХ! Бот зашёл!'));
+bot.on('error', (err) => console.log('❌ Ошибка:', err.message));
+bot.on('end', () => console.log('❌ Отключён'));
